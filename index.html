@@ -30,8 +30,6 @@
       display: grid;
       grid-template-columns: repeat(3, 100px);
       gap: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
 
     .cell {
@@ -42,8 +40,9 @@
       justify-content: center;
       font-size: 2em;
       cursor: pointer;
-      transition: background-color 0.3s;
       border: 2px solid #fff;
+      border-radius: 8px;
+      transition: background-color 0.3s;
     }
 
     .cell:hover {
@@ -81,12 +80,6 @@
     .reset-button:hover {
       background-color: #ff99b4; /* Slightly lighter pink on hover */
     }
-
-    .footer {
-      margin-top: 40px;
-      text-align: center;
-      color: #fff;
-    }
   </style>
 </head>
 
@@ -108,10 +101,6 @@
 
   <p class="status" id="status"></p>
   <button class="reset-button" onclick="resetGame()">Reset Game</button>
-
-  <div class="footer">
-    <p>&copy; 2023 Tic Tac Toe. All rights reserved.</p>
-  </div>
 
   <script>
     let currentPlayer = 'X';
